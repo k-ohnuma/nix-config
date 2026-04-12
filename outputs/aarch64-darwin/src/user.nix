@@ -10,7 +10,7 @@ let
     ];
   };
 
-  systemArgs = modules // args // { inherit userName; };
+  systemArgs = modules // args // { inherit hostName userName; };
 in
 {
   darwinConfigurations.${hostName} = libx.macosSystem systemArgs;

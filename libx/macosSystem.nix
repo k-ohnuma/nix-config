@@ -1,17 +1,27 @@
 {
   lib,
+  libx,
   inputs,
   darwin-modules,
   home-modules ? [ ],
   system,
+  hostName,
   userName,
+  specialArgs ? {
+    inherit
+      inputs
+      libx
+      hostName
+      userName
+      ;
+  },
   ...
 }:
 let
   inherit (inputs) nixpkgs-darwin home-manager nix-darwin;
 in
 nix-darwin.lib.darwinSystem {
-  inherit system;
+  inherit system specialArgs;
   modules =
     darwin-modules
     ++ [
@@ -32,6 +42,7 @@ nix-darwin.lib.darwinSystem {
         home-manager.useUserPackages = true;
         home-manager.backupFileExtension = "home-manager.backup";
 
+        home-manager.extraSpecialArgs = specialArgs;
         home-manager.users."${userName}".imports = home-modules;
       }
     ]);
