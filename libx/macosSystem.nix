@@ -13,6 +13,7 @@
       libx
       hostName
       userName
+      system
       ;
   },
   ...
@@ -39,7 +40,7 @@ nix-darwin.lib.darwinSystem {
       home-manager.darwinModules.home-manager
       {
         home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
+        home-manager.useUserPackages = false;
         home-manager.backupFileExtension = "home-manager.backup";
 
         home-manager.extraSpecialArgs = specialArgs;
