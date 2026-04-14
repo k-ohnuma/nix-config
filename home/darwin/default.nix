@@ -1,13 +1,13 @@
 {
   libx,
+  userName,
   ...
 }:
 {
+  home.homeDirectory = "/Users/${userName}";
   imports = (libx.scanPaths ./.) ++ [
     ../base/home.nix
+    ../base/core
   ];
-
-  # enable management of XDG base directories on macOS.
   xdg.enable = true;
 }
-
