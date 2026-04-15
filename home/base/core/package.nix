@@ -3,7 +3,7 @@
   home.packages = with pkgs; [
     # Nix editing and formatting.
     nixd
-    nixfmt-rfc-style
+    nixfmt
 
     # Core CLI utilities used across repos.
     awscli2
