@@ -48,9 +48,7 @@
         wip = "!git add . && git commit -m 'wip'";
         commitwith = "!sh -c 'git add . && git commit -m \"$1\"' -";
       };
-    };
 
-    extraConfig = {
       http = {
         postBuffer = "500M";
         maxRequestBuffer = "100M";
