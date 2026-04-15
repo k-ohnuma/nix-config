@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, libx, ... }:
 {
   xdg.configFile = {
-    "fish/functions/fish_user_key_bindings.fish".source = ./fish/functions/fish_user_key_bindings.fish;
+    "fish/functions/fish_user_key_bindings.fish".source = libx.relativeToRoot ./fish/functions/fish_user_key_bindings.fish;
     "fish/functions/ncc.fish".source = ./fish/functions/ncc.fish;
-    "fish/functions/fish_clipboard_copy_word.fish".source = ./fish/functions/fish_clipboard_copy_word.fish;
-    "fish/functions/fish_clipboard_copy_line.fish".source = ./fish/functions/fish_clipboard_copy_line.fish;
+    "fish/functions/fish_clipboard_copy_word.fish".source = libx.relativeToRoot ./fish/functions/fish_clipboard_copy_word.fish;
+    "fish/functions/fish_clipboard_copy_line.fish".source = libx.relativeToRoot ./fish/functions/fish_clipboard_copy_line.fish;
   };
 
   programs.fish = {
