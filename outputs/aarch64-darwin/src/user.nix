@@ -8,6 +8,7 @@
 let
   hostName = "user";
   userName = "user";
+  nixConfigRelativePath = "nix/nix-config";
 
   modules = {
     darwin-modules = [
@@ -31,6 +32,7 @@ let
       libx
       system
       userName
+      nixConfigRelativePath
       ;
   };
 in

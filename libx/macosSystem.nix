@@ -7,6 +7,7 @@
   system,
   hostName,
   userName,
+  nixConfigRelativePath,
   specialArgs ? {
     inherit
       inputs
@@ -14,6 +15,7 @@
       hostName
       userName
       system
+      nixConfigRelativePath
       ;
   },
   ...
@@ -27,7 +29,7 @@ nix-darwin.lib.darwinSystem {
     darwin-modules
     ++ [
       (
-        { lib, ... }:
+        { ... }:
         {
           nixpkgs.pkgs = import nixpkgs-darwin {
             inherit system;
