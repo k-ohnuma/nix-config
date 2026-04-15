@@ -8,6 +8,8 @@
   imports = (libx.scanPaths ./.) ++ [
     ../base/home.nix
     ../base/core
+    ../base/dev
+    ../base/apps
   ];
   xdg.enable = true;
 }
