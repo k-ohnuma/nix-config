@@ -2,6 +2,8 @@
 {
   programs.ghostty = {
     enable = true;
+    # これ明示しないとprecmdでshell遅くなる
+    enableZshIntegration = false;
     package =
       if pkgs.stdenv.isDarwin then
         (if pkgs ? ghostty-bin then pkgs.ghostty-bin else null)
