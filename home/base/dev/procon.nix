@@ -13,4 +13,15 @@ let
 in
 {
   xdg.configFile."cargo-atcoder.toml".text = cargoAtcoderConfig;
+
+  home.file = {
+    "dev/atcoder/compete/compete.toml".source =
+      libx.relativeToRoot "procon/cargo-compete/compete.toml";
+    "dev/atcoder/virtual/compete.toml".source =
+      libx.relativeToRoot "procon/cargo-compete/virtual.toml";
+
+    "dev/atcoder/compete/.cargo/config.toml".source = libx.relativeToRoot "procon/config.toml";
+    "dev/atcoder/virtual/.cargo/config.toml".source = libx.relativeToRoot "procon/config.toml";
+    "dev/atcoder/ahc/.cargo/config.toml".source = libx.relativeToRoot "procon/config.toml";
+  };
 }
