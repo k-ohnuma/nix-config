@@ -52,7 +52,6 @@
         eval "$(/opt/homebrew/bin/brew shellenv)"
       end
 
-      fish_add_path -m /Applications/WezTerm.app/Contents/MacOS
       fish_add_path -m $HOME/.local/bin
       fish_add_path -m $HOME/.local/share/mise/shims
       fish_add_path -m $HOME/.nix-profile/bin
