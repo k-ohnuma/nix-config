@@ -38,15 +38,7 @@ nalgebra = "0.30.0"
 
 # source code template
 template = """
-#[rustfmt::skip]
-pub use lib::*;
-pub mod lib { pub use ac_library::*; pub use itertools::Itertools; pub use proconio::{input, marker::*}; pub use superslice::Ext; pub use std::cmp::*;}
-
-fn main() {
-    input! {
-
-    }
-}
+__PROCON_TEMPLATE_RS__
 """
 
 
