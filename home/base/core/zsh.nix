@@ -1,4 +1,4 @@
-{ libx, pkgs, ... }:
+{ config, libx, pkgs, ... }:
 {
   xdg.configFile = {
     "zsh/prompt.zsh".source = libx.relativeToRoot "zsh/prompt.zsh";
@@ -8,6 +8,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = false;
+    dotDir = "${config.xdg.configHome}/zsh";
     shellAliases = {
       view = "nvim -R";
       vim = "nvim";
