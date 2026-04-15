@@ -1,7 +1,12 @@
+{ pkgs, ... }:
 {
   programs.ghostty = {
     enable = true;
-
+    package =
+      if pkgs.stdenv.isDarwin then
+        (if pkgs ? ghostty-bin then pkgs.ghostty-bin else null)
+      else
+        pkgs.ghostty;
     settings = {
       font-family = "Bizin Gothic NF";
       font-size = 15;
