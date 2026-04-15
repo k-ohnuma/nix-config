@@ -40,7 +40,6 @@
     # Build and task execution tools.
     cargo-make
     cmake
-    gcc
     ninja
     pkg-config
 
