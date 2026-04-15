@@ -16,7 +16,6 @@
     httpie
     jq
     just
-    mise
     nb
     ripgrep
     taplo
