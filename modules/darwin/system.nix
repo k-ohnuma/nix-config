@@ -40,6 +40,20 @@
         # ステータスバーの有効化
         ShowStatusBar = true;
       };
+      CustomUserPreferences = {
+        "com.apple.symbolichotkeys" = {
+          AppleSymbolicHotKeys = {
+            # Spotlight検索を無効化
+            "64" = {
+              enabled = false;
+            };
+            # Finder 検索ウィンドウを無効化
+            "65" = {
+              enabled = false;
+            };
+          };
+        };
+      };
     };
   };
 }
