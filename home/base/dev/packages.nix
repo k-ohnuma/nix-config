@@ -40,6 +40,8 @@
     # Build and task execution tools.
     cargo-make
     cmake
+    lua
+    luarocks
     ninja
     pkg-config
 

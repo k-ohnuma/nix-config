@@ -21,19 +21,28 @@
     # brew install --cask
     # ghostty, weztermはhmで引っ張る
     casks = [
-      "burp-suite"
-      "docker-desktop"
+      # Browsers
       "firefox"
       "google-chrome"
+
+      # Communication
+      "slack"
+      "zoom"
+
+      # Desktop tools
       "hiddenbar"
-      "httpie-desktop"
       "karabiner-elements"
-      "keepassxc"
       "raycast"
       "rectangle"
-      "slack"
+
+      # Security
+      "keepassxc"
+
+      # Development
+      "burp-suite"
+      "docker-desktop"
+      "httpie-desktop"
       "zap"
-      "zoom"
     ];
   };
 }
