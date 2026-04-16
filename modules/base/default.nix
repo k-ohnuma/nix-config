@@ -1,1 +1,4 @@
-{ ... }: { }
+{ libx, ... }:
+{
+  imports = libx.scanPaths ./.;
+}

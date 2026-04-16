@@ -1,0 +1,10 @@
+{
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    builders-use-substitutes = true;
+  };
+
+}
