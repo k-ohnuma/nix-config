@@ -1,4 +1,9 @@
-{ config, libx, pkgs, ... }:
+{
+  config,
+  libx,
+  pkgs,
+  ...
+}:
 {
   xdg.configFile = {
     "zsh/prompt.zsh".source = libx.relativeToRoot "zsh/prompt.zsh";
@@ -58,7 +63,7 @@
       }
     ];
 
-    initExtra = ''
+    initContent = ''
       ZSH_CONFIG="$HOME/.config/zsh"
 
       if [[ -x /opt/homebrew/bin/brew ]]; then
