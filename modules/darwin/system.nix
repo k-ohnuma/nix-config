@@ -137,6 +137,31 @@
             };
           };
         };
+        ".GlobalPreferences" = {
+          # automatically switch to a new space when switching to the application
+          AppleSpacesSwitchOnActivate = true;
+        };
+        "com.apple.finder" = {
+          AppleShowAllFiles = true;
+          ShowExternalHardDrivesOnDesktop = false;
+          ShowHardDrivesOnDesktop = false;
+          ShowMountedServersOnDesktop = false;
+          ShowRemovableMediaOnDesktop = false;
+          _FXSortFoldersFirst = false;
+        };
+        "com.apple.desktopservices" = {
+          # Avoid creating .DS_Store files on network or USB volumes
+          DSDontWriteNetworkStores = true;
+          DSDontWriteUSBStores = true;
+        };
+        "com.apple.screencapture" = {
+          location = "~/Desktop/ss";
+          type = "png";
+        };
+        "com.apple.AdLib" = {
+          allowApplePersonalizedAdvertising = false;
+        };
+
         loginwindow = {
           GuestEnabled = false;
           SHOWFULLNAME = false;
