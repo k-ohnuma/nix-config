@@ -1,4 +1,9 @@
-{ userName, ... }:
+{
+  hostName,
+  nixConfigRelativePath,
+  userName,
+  ...
+}:
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -11,6 +16,9 @@
     sessionVariables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
+      NIX_CONFIG_RELATIVE_PATH = nixConfigRelativePath;
+      NIX_DARWIN_HOST = hostName;
+      NIX_DARWIN_USER = userName;
     };
   };
 }
