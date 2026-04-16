@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # neovim 0.11.5
+    nixpkgs-neovim.url = "github:nixos/nixpkgs/nixos-25.05";
     # nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-25.11-darwin";
     nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nix-darwin = {
