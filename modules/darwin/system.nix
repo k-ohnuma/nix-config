@@ -40,6 +40,34 @@
         # ステータスバーの有効化
         ShowStatusBar = true;
       };
+      NSGlobalDomain = {
+        # 拡張子を常に表示
+        AppleShowAllExtensions = true;
+        # ナチュラルスクロール
+        "com.apple.swipescrolldirection" = false;
+        # 音量変更時の音
+        "com.apple.sound.beep.feedback" = 0;
+        # ダークモード
+        AppleInterfaceStyle = "Dark";
+        AppleKeyboardUIMode = 3;
+        # キー長押し時のアクセント入力を有効化
+        ApplePressAndHoldEnabled = false;
+
+        # キーリピート開始までの待ち時間
+        # 最小15(225ms) / 最大120(1800ms)
+        InitialKeyRepeat = 15;
+        # キーリピート速度（小さいほど速い）
+        # 最小2(30ms) / 最大120(1800ms)
+        KeyRepeat = 2;
+
+        # 入力補助の自動置換系を無効化
+        NSAutomaticCapitalizationEnabled = false;
+        NSAutomaticDashSubstitutionEnabled = false;
+        NSAutomaticPeriodSubstitutionEnabled = false;
+        NSAutomaticQuoteSubstitutionEnabled = false;
+        NSAutomaticSpellingCorrectionEnabled = false;
+      };
+
       CustomUserPreferences = {
         "com.apple.symbolichotkeys" = {
           AppleSymbolicHotKeys = {
