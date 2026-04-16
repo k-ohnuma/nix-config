@@ -11,13 +11,8 @@ let
   nixConfigRelativePath = "nix/nix-config";
 
   modules = {
-    darwin-modules = [
-      {
-        users.users.${userName}.home = "/Users/${userName}";
-        system.primaryUser = userName;
-        system.stateVersion = 6;
-        nix.enable = false;
-      }
+    darwin-modules = map libx.relativeToRoot[
+      "modules/darwin"
     ];
     home-modules = map libx.relativeToRoot [
       "home/hosts/darwin/${hostName}.nix"
