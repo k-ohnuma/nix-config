@@ -19,31 +19,11 @@
         "cargo:cargo-acj" = "latest";
         "cargo:cargo-atcoder" = "latest";
         "pipx:online-judge-api-client" = "latest";
-
         # vsnip
         "cargo:vsnip-cli" = "latest";
-
-        # dev
-        "cargo:cargo-nextest" = "latest";
-        "cargo:sqlx-cli" = "0.7.3";
-        "npm:@biomejs/biome" = "latest";
         "npm:@openai/codex" = "latest";
-        "npm:aws-cdk" = "latest";
-        "npm:cdktf-cli" = "latest";
-        "npm:serverless" = "latest";
-        terraform = "latest";
-        uv = "latest";
-
-        # lang
-        bun = "latest";
-        deno = "latest";
-        go = "latest";
-        node = "24.11.0";
-        npm = "latest";
-        pnpm = "latest";
-        python = "latest";
-        rust = "1.89.0";
-        rust-analyzer = "2025-11-10";
+        # rust = "1.89.0";
+        # rust-analyzer = "2025-11-10";
       };
 
       tasks = {

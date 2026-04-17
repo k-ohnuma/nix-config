@@ -26,6 +26,9 @@
     stylua
     yq
     zoxide
+    biome
+    uv
+    python3
 
     # GNU userland replacements and extended shell tools.
     coreutils
