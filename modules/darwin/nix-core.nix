@@ -8,4 +8,3 @@
   nix.gc.automatic = false;
   system.stateVersion = 6;
 }
-

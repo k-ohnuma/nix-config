@@ -36,8 +36,8 @@ history:
   {{nix_bin}} profile history --profile /nix/var/nix/profiles/system
 
 gc:
-  sudo /nix/var/nix/profiles/default/bin/nix-collect-garbage --delete-older-than 7d
-  /nix/var/nix/profiles/default/bin/nix-collect-garbage --delete-older-than 7d
+  sudo /nix/var/nix/profiles/default/bin/nix-collect-garbage -d
+  /nix/var/nix/profiles/default/bin/nix-collect-garbage -d
 
 update:
   cd "{{repo}}" && {{nix_bin}} flake update

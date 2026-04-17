@@ -20,5 +20,5 @@ let
 in
 outputs
 // {
-  inherit data; 
+  inherit data;
 }

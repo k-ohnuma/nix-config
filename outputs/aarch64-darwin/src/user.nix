@@ -11,7 +11,7 @@ let
   nixConfigRelativePath = "nix/nix-config";
 
   modules = {
-    darwin-modules = map libx.relativeToRoot[
+    darwin-modules = map libx.relativeToRoot [
       "modules/darwin"
     ];
     home-modules = map libx.relativeToRoot [
@@ -19,17 +19,20 @@ let
     ];
   };
 
-  systemArgs = modules // args // {
-    inherit
-      hostName
-      inputs
-      lib
-      libx
-      system
-      userName
-      nixConfigRelativePath
-      ;
-  };
+  systemArgs =
+    modules
+    // args
+    // {
+      inherit
+        hostName
+        inputs
+        lib
+        libx
+        system
+        userName
+        nixConfigRelativePath
+        ;
+    };
 in
 {
   darwinConfigurations.${hostName} = libx.macosSystem systemArgs;

@@ -8,26 +8,25 @@ let
 
   proconTemplateRs = builtins.readFile (libx.relativeToRoot "procon/template.rs");
 
-  cargoAtcoderConfig = builtins.replaceStrings
-    [
-      "__CARGO_ATCODER_TARGET__"
-      "__PROCON_TEMPLATE_RS__"
-    ]
-    [
-      cargoAtcoderTarget
-      proconTemplateRs
-    ]
-    (builtins.readFile (libx.relativeToRoot "procon/cargo-atcoder/cargo-atcoder.toml"));
+  cargoAtcoderConfig =
+    builtins.replaceStrings
+      [
+        "__CARGO_ATCODER_TARGET__"
+        "__PROCON_TEMPLATE_RS__"
+      ]
+      [
+        cargoAtcoderTarget
+        proconTemplateRs
+      ]
+      (builtins.readFile (libx.relativeToRoot "procon/cargo-atcoder/cargo-atcoder.toml"));
 
-  cargoCompeteConfig = builtins.replaceStrings
-    [ "__PROCON_TEMPLATE_RS__" ]
-    [ proconTemplateRs ]
-    (builtins.readFile (libx.relativeToRoot "procon/cargo-compete/compete.toml"));
+  cargoCompeteConfig = builtins.replaceStrings [ "__PROCON_TEMPLATE_RS__" ] [ proconTemplateRs ] (
+    builtins.readFile (libx.relativeToRoot "procon/cargo-compete/compete.toml")
+  );
 
-  cargoVirtualConfig = builtins.replaceStrings
-    [ "__PROCON_TEMPLATE_RS__" ]
-    [ proconTemplateRs ]
-    (builtins.readFile (libx.relativeToRoot "procon/cargo-compete/virtual.toml"));
+  cargoVirtualConfig = builtins.replaceStrings [ "__PROCON_TEMPLATE_RS__" ] [ proconTemplateRs ] (
+    builtins.readFile (libx.relativeToRoot "procon/cargo-compete/virtual.toml")
+  );
 in
 {
   xdg.configFile."cargo-atcoder.toml".text = cargoAtcoderConfig;
