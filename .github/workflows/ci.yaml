@@ -1,0 +1,30 @@
+name: nix flake eval test
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
+      - "Justfile"
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "**.md"
+      - "Justfile"
+jobs:
+  checks:
+    name: nix flake eval
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Install nix
+        uses: cachix/install-nix-action@v31
+        with:
+          install_url: https://nixos.org/nix/install
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+      - name: Run Nix Flake Eval Tests
+        run: |
+          nix eval .#evalTests --show-trace --print-build-logs --verbose
