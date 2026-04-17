@@ -22,7 +22,13 @@ eval host=default_host:
 
 build host=default_host:
   cd "{{repo}}" && git status --short || true
-  cd "{{repo}}" && sudo {{nix_bin}} build ".#darwinConfigurations.{{host}}.system" -L
+  cd "{{repo}}" && ( [ -L result ] && rm -f result || true )
+  cd "{{repo}}" && sudo {{nix_bin}} build ".#darwinConfigurations.{{host}}.system" -L --no-link
+
+push host=default_host:
+  just --justfile "{{repo}}/Justfile" test
+  just --justfile "{{repo}}/Justfile" build "{{host}}"
+  cd "{{repo}}" && branch=$(git rev-parse --abbrev-ref HEAD) && git push origin "$branch"
 
 switch host=default_host:
   cd "{{repo}}" && git status --short || true
