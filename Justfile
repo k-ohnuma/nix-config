@@ -13,6 +13,9 @@ help:
 fmt:
   cd "{{repo}}" && git ls-files '*.nix' | xargs -I{} nixfmt "{}"
 
+test:
+  cd "{{repo}}" && {{nix_bin}} eval .#evalTests --show-trace --print-build-logs --verbose
+
 eval host=default_host:
   cd "{{repo}}" && {{nix_bin}} eval --raw ".#darwinConfigurations.{{host}}.system" >/dev/null
   @echo "eval ok: darwinConfigurations.{{host}}.system"

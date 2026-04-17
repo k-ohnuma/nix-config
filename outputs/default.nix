@@ -12,4 +12,6 @@ in
   darwinConfigurations = lib.attrsets.mergeAttrsList (
     map (it: it.darwinConfigurations or { }) darwinSystemValues
   );
+
+  evalTests = lib.lists.all (it: it.evalTests == { }) darwinSystemValues;
 }
