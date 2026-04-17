@@ -10,6 +10,11 @@
       signByDefault = true;
     };
 
+    ignores = [
+      ".DS_Store"
+      ".direnv/"
+    ];
+
     settings = {
       user = {
         name = "ohnuma";

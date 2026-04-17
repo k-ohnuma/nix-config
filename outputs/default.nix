@@ -6,6 +6,9 @@ let
   darwinSystems = {
     aarch64-darwin = import ./aarch64-darwin (args // { system = "aarch64-darwin"; });
   };
+  allSystems = darwinSystems;
+  allSystemNames = builtins.attrNames allSystems;
+  forAllSystems = func: lib.genAttrs allSystemNames func;
   darwinSystemValues = builtins.attrValues darwinSystems;
 in
 {
@@ -14,4 +17,20 @@ in
   );
 
   evalTests = lib.lists.all (it: it.evalTests == { }) darwinSystemValues;
+
+  devShells = forAllSystems (
+    system:
+    let
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
+    {
+      default = pkgs.mkShell {
+        name = "nix-config";
+        packages = with pkgs; [
+          just
+          nixfmt
+        ];
+      };
+    }
+  );
 }
