@@ -29,6 +29,7 @@
     biome
     uv
     python3
+    nodejs_24
 
     # GNU userland replacements and extended shell tools.
     coreutils
