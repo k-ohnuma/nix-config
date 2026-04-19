@@ -3,14 +3,14 @@ return {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     keys = {
-      {
-        "<CR>",
-        'v:lua.require("nvim-autopairs").autopairs_cr()',
-        mode = "i",
-        expr = true,
-        noremap = true,
-      },
-      { "<S-CR>", "<CR>", mode = "i" },
+      -- {
+      --   "<CR>",
+      --   'v:lua.require("nvim-autopairs").autopairs_cr()',
+      --   mode = "i",
+      --   expr = true,
+      --   noremap = true,
+      -- },
+      -- { "<S-CR>", "<CR>", mode = "i" },
     },
     config = function()
       require("plugins.config.autopairs")
