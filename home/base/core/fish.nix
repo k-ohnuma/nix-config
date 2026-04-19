@@ -3,11 +3,16 @@
   xdg.configFile = {
     "fish/functions/fish_user_key_bindings.fish".source =
       libx.relativeToRoot "fish/fish_user_key_bindings.fish";
-    "fish/functions/ncc.fish".source = libx.relativeToRoot "fish/ncc.fish";
     "fish/functions/fish_clipboard_copy_word.fish".source =
       libx.relativeToRoot "fish/fish_clipboard_copy_word.fish";
     "fish/functions/fish_clipboard_copy_line.fish".source =
       libx.relativeToRoot "fish/fish_clipboard_copy_line.fish";
+    "fish/functions/ncc.fish".source = libx.relativeToRoot "fish/ncc.fish";
+    "fish/functions/s.fish".source = libx.relativeToRoot "fish/s.fish";
+    "fish/functions/t.fish".source = libx.relativeToRoot "fish/t.fish";
+    "fish/functions/aclogin.fish".source = libx.relativeToRoot "fish/aclogin.fish";
+    "fish/functions/equiq.fish".source = libx.relativeToRoot "fish/equiq.fish";
+    "fish/functions/eqq.fish".source = libx.relativeToRoot "fish/eqq.fish";
   };
 
   programs.fish = {
