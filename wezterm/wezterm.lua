@@ -21,7 +21,7 @@ config.window_decorations = "RESIZE"
 local COLOR_SCHEME = "Tokyo Night Moon"
 config.color_scheme = COLOR_SCHEME
 -- 背景の非透過率（1なら完全に透過させない）
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.90
 config.macos_window_background_blur = 0
 
 config.adjust_window_size_when_changing_font_size = true
