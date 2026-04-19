@@ -3,6 +3,7 @@ require("nvim-treesitter.configs").setup({
   ignore_install = { "ipkg" },
   highlight = {
     enable = true,
+    additional_vim_regex_highlighting = true,
   },
   yati = {
     enable = true,
