@@ -8,12 +8,6 @@ augroup highlight_yank
 augroup END
 ]])
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function()
-    vim.api.nvim_command([[%s/\r//ge]])
-  end,
-})
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
   callback = function()
@@ -30,6 +24,18 @@ vim.api.nvim_create_user_command("E", function()
   vim.cmd("silent! redrawtabline")
   vim.cmd("silent! redrawstatus")
 end, {})
+
+vim.api.nvim_create_user_command("BB", function()
+  if vim.bo.buftype ~= "" or not vim.bo.modifiable or vim.bo.binary then
+    return
+  end
+
+  if vim.fn.search([[\r]], "nw") == 0 then
+    return
+  end
+
+  vim.cmd([[silent! keepjumps keeppatterns %s/\r//ge]])
+end, { desc = "Remove CR (^M) in current buffer" })
 
 vim.api.nvim_create_user_command(
   "VsnipRefresh",
