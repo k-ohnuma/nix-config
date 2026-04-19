@@ -8,7 +8,7 @@ local home = vim.env.HOME or "~"
 local nix_config_relative_path = vim.env.NIX_CONFIG_RELATIVE_PATH or "nix/nix-config"
 local nix_darwin_host = vim.env.NIX_DARWIN_HOST or "user"
 local nix_config_root = vim.fs.normalize(home .. "/" .. nix_config_relative_path)
-local flake_expr = string.format('(builtins.getFlake %q)', nix_config_root)
+local flake_expr = string.format("(builtins.getFlake %q)", nix_config_root)
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -49,7 +49,34 @@ end
 
 vim.lsp.config("rust_analyzer", {
   settings = {
-    ["rust-analyzer"] = { cargo = { features = "all" } },
+    ["rust-analyzer"] = {
+      -- 起動直後の先読み解析を無効化する。
+      cachePriming = {
+        enable = true,
+      },
+      cargo = {
+        -- 有効にする feature を明示する設定。
+        -- "all" にすると --all-features 相当になり、解析対象が増えて重くなりやすい。
+        features = {},
+        -- すべての target を見るかどうか。
+        -- デフォルトは true。
+        -- true だと test / bench / example なども含めて広く解析しやすい。
+        allTargets = false,
+        buildScripts = {
+          enable = false,
+        },
+      },
+      -- procedural macro を展開して解析するかどうか。
+      procMacro = {
+        enable = true,
+      },
+      -- 保存時に cargo check 相当を走らせて診断を出す
+      checkOnSave = true,
+      check = {
+        -- 保存時チェックでも --all-targets を使うか。
+        allTargets = false,
+      },
+    },
   },
   on_attach = function(_, bufnr)
     vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
