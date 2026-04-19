@@ -68,7 +68,10 @@ path = "./{{ contest }}"
 
 [test]
 # Toolchain for the test. (optional)
-toolchain = "1.89.0"
+# NOTE:
+# - If this is set, cargo-compete executes `rustup run <toolchain> ...`.
+# - In Nix devshell environments, `rustup` may not exist on PATH.
+#   Keep this unset to use the current `cargo` in PATH.
 # Profile for `cargo build`. ("dev" | "release")
 #
 # Defaults to `"dev"`.
