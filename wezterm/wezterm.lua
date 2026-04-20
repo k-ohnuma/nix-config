@@ -27,6 +27,8 @@ config.macos_window_background_blur = 0
 config.adjust_window_size_when_changing_font_size = true
 -- これ設定しないとバックスラッシュがうまくいかん
 config.send_composed_key_when_left_alt_is_pressed = true
+-- これ設定しないとshift+enterが機能せん
+config.enable_kitty_keyboard = true
 
 -- leader key(悩み中, tmuxで使ってた<C-g>telescopeとconflictする)
 config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 }
