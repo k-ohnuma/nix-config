@@ -48,3 +48,7 @@ just switch
 - `just gc`: garbage collection
 - `just update`: update `flake.lock`
 - `just update-input <name>`: update a specific flake input
+
+## Related Repositories
+
+- [`nix-config-vars`](https://github.com/k-ohnuma/nix-config-vars): local variables consumed from `inputs.vars`
