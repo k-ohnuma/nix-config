@@ -34,6 +34,10 @@ switch host=default_host:
   cd "{{repo}}" && git status --short || true
   cd "{{repo}}" && sudo {{nix_bin}} run nix-darwin -- switch --flake ".#{{host}}"
 
+switch-vars host=default_host vars_path="../nix-config-vars":
+  cd "{{repo}}" && git status --short || true
+  cd "{{repo}}" && sudo {{nix_bin}} run nix-darwin -- switch --flake ".#{{host}}" --override-input vars "path:{{vars_path}}"
+
 switch-clean host=default_host:
   cd "{{repo}}" && test -z "$(git status --porcelain)" || (echo "working tree is dirty"; git status --short; exit 1)
   cd "{{repo}}" && sudo {{nix_bin}} run nix-darwin -- switch --flake ".#{{host}}"

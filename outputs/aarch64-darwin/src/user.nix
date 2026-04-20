@@ -3,6 +3,7 @@
   lib,
   libx,
   system,
+  vars,
   ...
 }@args:
 let
@@ -31,6 +32,7 @@ let
         system
         userName
         nixConfigRelativePath
+        vars
         ;
     };
 in

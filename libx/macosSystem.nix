@@ -8,6 +8,7 @@
   hostName,
   userName,
   nixConfigRelativePath,
+  vars,
   specialArgs ? {
     inherit
       inputs
@@ -16,6 +17,7 @@
       userName
       system
       nixConfigRelativePath
+      vars
       ;
   },
   ...

@@ -1,4 +1,13 @@
-{ config, ... }:
+{
+  config,
+  vars,
+  userName,
+  ...
+}:
+let
+  gitUserName = vars.users.${userName}.git.userName;
+  gitUserEmail = vars.users.${userName}.git.userEmail;
+in
 {
   programs.git = {
     enable = true;
@@ -17,8 +26,8 @@
 
     settings = {
       user = {
-        name = "ohnuma";
-        email = "k.a.y.0818.k@gmail.com";
+        name = gitUserName;
+        email = gitUserEmail;
       };
 
       init.defaultBranch = "main";

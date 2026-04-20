@@ -117,8 +117,20 @@
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs",
         "nixpkgs-darwin": "nixpkgs-darwin",
-        "nixpkgs-neovim": "nixpkgs-neovim"
+        "nixpkgs-neovim": "nixpkgs-neovim",
+        "vars": "vars"
       }
+    },
+    "vars": {
+      "locked": {
+        "path": "./vars",
+        "type": "path"
+      },
+      "original": {
+        "path": "./vars",
+        "type": "path"
+      },
+      "parent": []
     }
   },
   "root": "root",
