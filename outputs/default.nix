@@ -3,7 +3,14 @@ let
   inherit (nixpkgs) lib;
   libx = import ../libx { inherit lib; };
   vars = inputs.vars.lib;
-  args = { inherit inputs libx lib vars; };
+  args = {
+    inherit
+      inputs
+      libx
+      lib
+      vars
+      ;
+  };
   darwinSystems = {
     aarch64-darwin = import ./aarch64-darwin (args // { system = "aarch64-darwin"; });
   };

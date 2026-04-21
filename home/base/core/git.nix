@@ -2,6 +2,7 @@
   config,
   vars,
   userName,
+  lib,
   ...
 }:
 let
@@ -14,7 +15,7 @@ in
     lfs.enable = true;
 
     signing = {
-      key = "${config.home.homeDirectory}/.ssh/id_ed25519.pub";
+      key = lib.mkDefault "${config.home.homeDirectory}/.ssh/id_ed25519.pub";
       format = "ssh";
       signByDefault = true;
     };
