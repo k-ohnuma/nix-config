@@ -34,6 +34,7 @@
       "karabiner-elements"
       "raycast"
       "rectangle"
+      "alt-tab"
 
       # Security
       "keepassxc"
