@@ -7,6 +7,7 @@
 
     # Core CLI utilities used across repos.
     awscli2
+    git-remote-codecommit
     bat
     curl
     direnv
