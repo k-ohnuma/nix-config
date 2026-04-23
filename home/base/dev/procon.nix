@@ -37,8 +37,6 @@ in
 
     "dev/atcoder/compete/.cargo/config.toml".source = libx.relativeToRoot "procon/config.toml";
     "dev/atcoder/virtual/.cargo/config.toml".source = libx.relativeToRoot "procon/config.toml";
-    "dev/atcoder/compete/template-cargo-lock.toml".source = libx.relativeToRoot "procon/template-cargo-lock.toml";
-    "dev/atcoder/virtual/template-cargo-lock.toml".source = libx.relativeToRoot "procon/template-cargo-lock.toml";
     "dev/atcoder/ahc/.cargo/config.toml".source = libx.relativeToRoot "procon/config.toml";
   };
 }
