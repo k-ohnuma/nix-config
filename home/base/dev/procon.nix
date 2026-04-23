@@ -1,4 +1,10 @@
-{ pkgs, libx, ... }:
+{
+  pkgs,
+  libx,
+  config,
+  nixConfigRelativePath,
+  ...
+}:
 let
   cargoAtcoderTarget =
     if pkgs.stdenv.isDarwin && pkgs.stdenv.hostPlatform.isAarch64 then
@@ -27,6 +33,8 @@ let
   cargoVirtualConfig = builtins.replaceStrings [ "__PROCON_TEMPLATE_RS__" ] [ proconTemplateRs ] (
     builtins.readFile (libx.relativeToRoot "procon/cargo-compete/virtual.toml")
   );
+
+  templateCargoLockSource = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/${nixConfigRelativePath}/procon/template-cargo-lock.toml";
 in
 {
   xdg.configFile."cargo-atcoder.toml".text = cargoAtcoderConfig;
@@ -34,6 +42,8 @@ in
   home.file = {
     "dev/atcoder/compete/compete.toml".text = cargoCompeteConfig;
     "dev/atcoder/virtual/compete.toml".text = cargoVirtualConfig;
+    "dev/atcoder/compete/template-cargo-lock.toml".source = templateCargoLockSource;
+    "dev/atcoder/virtual/template-cargo-lock.toml".source = templateCargoLockSource;
 
     "dev/atcoder/compete/.cargo/config.toml".source = libx.relativeToRoot "procon/config.toml";
     "dev/atcoder/virtual/.cargo/config.toml".source = libx.relativeToRoot "procon/config.toml";
