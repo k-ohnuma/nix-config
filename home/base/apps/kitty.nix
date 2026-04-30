@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   programs.kitty = {
     enable = true;
@@ -11,6 +11,7 @@
     themeFile = "ayu_mirage";
 
     settings = {
+      shell = "${config.home.homeDirectory}/.nix-profile/bin/fish";
       cursor_shape = "block";
       cursor = "#f0fcff";
       cursor_blink_interval = 0;
