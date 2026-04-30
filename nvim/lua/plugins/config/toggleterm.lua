@@ -5,6 +5,7 @@ local lazygit
 function M.setup()
   require("toggleterm").setup({
     open_mapping = [[<c-t>]],
+    shell = "direnv exec / fish",
   })
 end
 
