@@ -16,8 +16,9 @@
         "pipx:online-judge-api-client" = "latest";
         # vsnip
         "cargo:vsnip-cli" = "latest";
-        # cdk(nixpkgsのバージョン更新が遅いので)
         "npm:@openai/codex" = "latest";
+        # cdk(nixpkgsのバージョン更新が遅いので)
+        "npm:aws-cdk" = "latest";
         "npm:cdktf-cli" = "latest";
         # npm(min-release-ageの設定が11.10.0)からしかできないので
         "npm" = "latest";
