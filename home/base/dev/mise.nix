@@ -18,8 +18,8 @@
         "cargo:vsnip-cli" = "latest";
         "npm:@openai/codex" = "latest";
         "npm:cdktf-cli" = "latest";
-        # rust = "1.89.0";
-        # rust-analyzer = "2025-11-10";
+        # npm(min-release-ageの設定が11.10.0)からしかできないので
+        "npm" = "latest";
       };
     };
   };
