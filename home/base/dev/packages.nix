@@ -10,7 +10,6 @@
     git-remote-codecommit
     bat
     curl
-    direnv
     eza
     fd
     fzf
