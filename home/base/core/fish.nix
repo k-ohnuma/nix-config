@@ -57,10 +57,9 @@
         eval "$(/opt/homebrew/bin/brew shellenv)"
       end
 
-      fish_add_path -m $HOME/.local/bin
       fish_add_path -m $HOME/.local/share/mise/shims
-      fish_add_path -m $HOME/.nix-profile/bin
-      fish_add_path -m /nix/var/nix/profiles/default/bin
+      fish_add_path $HOME/.nix-profile/bin
+      fish_add_path /nix/var/nix/profiles/default/bin
 
       fish_vi_key_bindings
 
