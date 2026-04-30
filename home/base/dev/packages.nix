@@ -27,9 +27,12 @@
     yq
     zoxide
     biome
+    prettier
     uv
     python3
     nodejs_24
+    deno
+    tree-sitter
 
     # GNU userland replacements and extended shell tools.
     coreutils
