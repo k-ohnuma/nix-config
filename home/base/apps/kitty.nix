@@ -20,6 +20,7 @@
 
       tab_bar_min_tabs = 1;
       tab_bar_edge = "top";
+      tab_bar_style = "separator";
 
       background_opacity = "0.9";
 
