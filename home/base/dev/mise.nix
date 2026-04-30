@@ -2,15 +2,10 @@
 {
   programs.mise = {
     enable = true;
-    enableFishIntegration = true;
-    enableZshIntegration = true;
+    enableFishIntegration = false;
+    enableZshIntegration = false;
 
     globalConfig = {
-      settings = {
-        idiomatic_version_file_enable_tools = [ "node" ];
-        pipx.uvx = true;
-      };
-
       tools = {
         # for procon
         "cargo:cargo-equip" = "latest";
