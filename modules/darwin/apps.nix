@@ -9,6 +9,7 @@
       upgrade = true;
       # nixで管理してないパッケージをuninstall
       cleanup = "uninstall";
+      extraFlags = [ "--force-cleanup" ];
     };
 
     # brew install

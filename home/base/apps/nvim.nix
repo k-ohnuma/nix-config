@@ -20,8 +20,9 @@ in
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
+    sideloadInitLua = true;
   };
 
-  home.file.".config/nvim".source =
+  xdg.configFile."nvim".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/${nixConfigRelativePath}/nvim";
 }
