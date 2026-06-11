@@ -30,7 +30,7 @@
     prettier
     uv
     python3
-    nodejs_24
+    nodejs_26
     deno
     tree-sitter
 
