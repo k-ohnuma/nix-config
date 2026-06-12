@@ -49,4 +49,39 @@ return {
       { "<Leader>dfc", "<cmd>DiffviewClose<CR>", mode = "n" },
     },
   },
+  {
+    "akinsho/git-conflict.nvim",
+    version = "*",
+    config = function()
+      require("git-conflict").setup({
+        default_mappings = false,
+        default_commands = true,
+        disable_diagnostics = false,
+        list_opener = "copen",
+      })
+      vim.keymap.set("n", "<leader>cc", "<Plug>(git-conflict-ours)", {
+        desc = "Conflict: choose ours/current",
+      })
+
+      vim.keymap.set("n", "<leader>ci", "<Plug>(git-conflict-theirs)", {
+        desc = "Conflict: choose theirs/incoming",
+      })
+
+      vim.keymap.set("n", "<leader>cb", "<Plug>(git-conflict-both)", {
+        desc = "Conflict: choose both",
+      })
+
+      vim.keymap.set("n", "<leader>c0", "<Plug>(git-conflict-none)", {
+        desc = "Conflict: choose none",
+      })
+
+      vim.keymap.set("n", "]x", "<Plug>(git-conflict-next-conflict)", {
+        desc = "Next conflict",
+      })
+
+      vim.keymap.set("n", "[x", "<Plug>(git-conflict-prev-conflict)", {
+        desc = "Previous conflict",
+      })
+    end,
+  },
 }
