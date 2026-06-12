@@ -25,6 +25,11 @@ build host=default_host:
   cd "{{repo}}" && ( [ -L result ] && rm -f result || true )
   cd "{{repo}}" && sudo {{nix_bin}} build ".#darwinConfigurations.{{host}}.system" -L --no-link
 
+build-vars host=default_host vars_path="../nix-config-vars":
+  cd "{{repo}}" && git status --short || true
+  cd "{{repo}}" && ( [ -L result ] && rm -f result || true )
+  cd "{{repo}}" && sudo {{nix_bin}} build ".#darwinConfigurations.{{host}}.system" -L --no-link --override-input vars "path:{{vars_path}}"
+
 push host=default_host:
   just --justfile "{{repo}}/Justfile" test
   just --justfile "{{repo}}/Justfile" build "{{host}}"
