@@ -17,6 +17,8 @@
     jq
     just
     nb
+    w3m
+    pandoc
     ripgrep
     taplo
     tree
