@@ -17,9 +17,6 @@
         # vsnip
         "cargo:vsnip-cli" = "latest";
         "npm:@openai/codex" = "latest";
-        # cdk(nixpkgsのバージョン更新が遅いので)
-        "npm:aws-cdk" = "latest";
-        "npm:cdktf-cli" = "latest";
       };
     };
   };
