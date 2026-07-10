@@ -30,9 +30,6 @@
     };
 
     keybindings = {
-      "cmd+u" = "next_tab";
-      "cmd+y" = "previous_tab";
-
       "ctrl+b>-" = "launch --location=hsplit";
       "ctrl+b>0x5d" = "launch --location=vsplit";
       "ctrl+b>alt+0x5d" = "launch --location=vsplit";

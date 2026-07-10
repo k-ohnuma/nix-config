@@ -10,6 +10,7 @@
     ../base/core
     ../base/dev
     ../base/apps
+    ../profiles/desktop
   ];
   xdg.enable = true;
 }
