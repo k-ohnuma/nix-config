@@ -57,7 +57,6 @@
     # Document and image processing utilities.
     ghostscript
     imagemagick
-    pngpaste
     tectonic
   ];
 }
