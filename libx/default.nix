@@ -1,5 +1,6 @@
 { lib, ... }:
 {
+  homeManagerSystem = import ./homeManagerSystem.nix;
   macosSystem = import ./macosSystem.nix;
 
   # どこで呼んでもlibx/default.nixからのパスにできるので../つければRootから呼ぶようにできる
