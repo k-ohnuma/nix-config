@@ -53,10 +53,6 @@
     };
 
     interactiveShellInit = ''
-      if test -x /opt/homebrew/bin/brew
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-      end
-
       fish_add_path -m /nix/var/nix/profiles/default/bin
       fish_add_path -m $HOME/.local/share/mise/shims
       fish_add_path -m $HOME/.nix-profile/bin
