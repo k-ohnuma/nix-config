@@ -7,6 +7,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
+  programs.home-manager.enable = true;
+
   home = {
     username = userName;
     # - 設定がどの Home Manager release と互換であるかを指定
