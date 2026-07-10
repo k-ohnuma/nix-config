@@ -6,9 +6,33 @@ require("mason-lspconfig").setup({
 
 local home = vim.env.HOME or "~"
 local nix_config_relative_path = vim.env.NIX_CONFIG_RELATIVE_PATH or "nix/nix-config"
+local nix_config_profile = vim.env.NIX_CONFIG_PROFILE or "darwin"
 local nix_darwin_host = vim.env.NIX_DARWIN_HOST or "user"
+local nix_home_user = vim.env.NIX_HOME_USER or vim.env.USER or "user"
 local nix_config_root = vim.fs.normalize(home .. "/" .. nix_config_relative_path)
 local flake_expr = string.format("(builtins.getFlake %q)", nix_config_root)
+
+local function nixd_options()
+  if nix_config_profile == "home-manager" then
+    return {
+      ["home-manager"] = {
+        expr = flake_expr .. ".homeConfigurations." .. string.format("%q", nix_home_user) .. ".options",
+      },
+    }
+  end
+
+  return {
+    ["nix-darwin"] = {
+      expr = flake_expr .. ".darwinConfigurations." .. string.format("%q", nix_darwin_host) .. ".options",
+    },
+    ["home-manager"] = {
+      expr = flake_expr
+        .. ".darwinConfigurations."
+        .. string.format("%q", nix_darwin_host)
+        .. ".options.home-manager.users.type.getSubOptions []",
+    },
+  }
+end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -121,17 +145,7 @@ vim.lsp.config("nixd", {
       nixpkgs = {
         expr = "import <nixpkgs> { }",
       },
-      options = {
-        ["nix-darwin"] = {
-          expr = flake_expr .. ".darwinConfigurations." .. string.format("%q", nix_darwin_host) .. ".options",
-        },
-        ["home-manager"] = {
-          expr = flake_expr
-            .. ".darwinConfigurations."
-            .. string.format("%q", nix_darwin_host)
-            .. ".options.home-manager.users.type.getSubOptions []",
-        },
-      },
+      options = nixd_options(),
     },
   },
 })
