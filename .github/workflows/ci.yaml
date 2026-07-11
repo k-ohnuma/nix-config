@@ -1,21 +1,32 @@
-name: nix flake eval test
+name: CI
+
 on:
   push:
     branches:
       - main
     paths-ignore:
       - "**.md"
-      - "Justfile"
   pull_request:
     branches:
       - main
     paths-ignore:
       - "**.md"
-      - "Justfile"
+
 jobs:
   checks:
-    name: nix flake eval
-    runs-on: ubuntu-latest
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux Home Manager
+            os: ubuntu-latest
+            just: ci-linux
+          - name: macOS nix-darwin
+            os: macos-latest
+            just: ci-darwin
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
@@ -25,6 +36,6 @@ jobs:
           install_url: https://nixos.org/nix/install
           extra_nix_config: |
             experimental-features = nix-command flakes
-      - name: Run Nix Flake Eval Tests
-        run: |
-          nix eval .#evalTests --show-trace --print-build-logs --verbose
+
+      - name: Run checks
+        run: nix develop -c just ${{ matrix.just }}
