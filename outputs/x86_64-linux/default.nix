@@ -15,8 +15,8 @@ in
 {
   inherit data;
 
-  homeConfigurations = lib.attrsets.mergeAttrsList (
-    map (it: it.homeConfigurations or { }) dataWithoutPaths
+  nixosConfigurations = lib.attrsets.mergeAttrsList (
+    map (it: it.nixosConfigurations or { }) dataWithoutPaths
   );
 
   evalTests = { };

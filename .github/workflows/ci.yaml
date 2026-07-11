@@ -20,9 +20,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: Linux Home Manager
+          - name: NixOS-WSL
             os: ubuntu-latest
-            just: ci-linux
+            just: ci-nixos
           - name: macOS nix-darwin
             os: macos-latest
             just: ci-darwin

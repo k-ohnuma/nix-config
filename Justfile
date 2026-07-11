@@ -2,7 +2,7 @@ set shell := ["bash", "-euo", "pipefail", "-c"]
 
 repo := justfile_directory()
 default_host := "user"
-default_user := "user"
+default_nixos_host := "user"
 nix_bin := `command -v nix`
 
 [private]
@@ -39,38 +39,38 @@ switch-darwin host=default_host vars="":
     sudo {{nix_bin}} run nix-darwin#darwin-rebuild -- switch --flake ".#{{host}}"; \
   fi
 
-eval-home user=default_user:
-  cd "{{repo}}" && {{nix_bin}} eval --raw ".#homeConfigurations.{{user}}.activationPackage.drvPath" >/dev/null
-  @echo "eval ok: homeConfigurations.{{user}}.activationPackage"
+eval-nixos host=default_nixos_host:
+  cd "{{repo}}" && {{nix_bin}} eval --raw ".#nixosConfigurations.{{host}}.config.system.build.toplevel.drvPath" >/dev/null
+  @echo "eval ok: nixosConfigurations.{{host}}.config.system.build.toplevel"
 
-build-home user=default_user vars="":
+build-nixos host=default_nixos_host vars="":
   cd "{{repo}}" && git status --short || true
   cd "{{repo}}" && ( [ -L result ] && rm -f result || true )
   cd "{{repo}}" && if [ -n "{{vars}}" ]; then \
-    {{nix_bin}} build ".#homeConfigurations.{{user}}.activationPackage" -L --no-link --override-input vars "path:{{vars}}"; \
+    {{nix_bin}} build ".#nixosConfigurations.{{host}}.config.system.build.toplevel" -L --no-link --override-input vars "path:{{vars}}"; \
   else \
-    {{nix_bin}} build ".#homeConfigurations.{{user}}.activationPackage" -L --no-link; \
+    {{nix_bin}} build ".#nixosConfigurations.{{host}}.config.system.build.toplevel" -L --no-link; \
   fi
 
-switch-home user=default_user vars="":
+switch-nixos host=default_nixos_host vars="":
   cd "{{repo}}" && git status --short || true
   cd "{{repo}}" && if [ -n "{{vars}}" ]; then \
-    home-manager switch --flake ".#{{user}}" --override-input vars "path:{{vars}}"; \
+    sudo nixos-rebuild switch --flake ".#{{host}}" --override-input vars "path:{{vars}}"; \
   else \
-    home-manager switch --flake ".#{{user}}"; \
+    sudo nixos-rebuild switch --flake ".#{{host}}"; \
   fi
 
 check:
   just --justfile "{{repo}}/Justfile" fmt-check
   just --justfile "{{repo}}/Justfile" test
   just --justfile "{{repo}}/Justfile" eval-darwin
-  just --justfile "{{repo}}/Justfile" eval-home
+  just --justfile "{{repo}}/Justfile" eval-nixos
 
-ci-linux:
+ci-nixos:
   just --justfile "{{repo}}/Justfile" fmt-check
   just --justfile "{{repo}}/Justfile" test
-  just --justfile "{{repo}}/Justfile" eval-home
-  just --justfile "{{repo}}/Justfile" build-home
+  just --justfile "{{repo}}/Justfile" eval-nixos
+  just --justfile "{{repo}}/Justfile" build-nixos
 
 ci-darwin:
   just --justfile "{{repo}}/Justfile" fmt-check
@@ -99,4 +99,4 @@ doctor:
   @echo "home-manager: $$(command -v home-manager || true)"
   @echo "fish: $$(command -v fish || true)"
   cd "{{repo}}" && {{nix_bin}} eval --raw ".#darwinConfigurations.{{default_host}}.system" >/dev/null && echo "darwin target ok: {{default_host}}"
-  cd "{{repo}}" && {{nix_bin}} eval --raw ".#homeConfigurations.{{default_user}}.activationPackage.drvPath" >/dev/null && echo "home target ok: {{default_user}}"
+  cd "{{repo}}" && {{nix_bin}} eval --raw ".#nixosConfigurations.{{default_nixos_host}}.config.system.build.toplevel.drvPath" >/dev/null && echo "nixos target ok: {{default_nixos_host}}"

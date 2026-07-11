@@ -1,7 +1,7 @@
 { lib, ... }:
 {
-  homeManagerSystem = import ./homeManagerSystem.nix;
   macosSystem = import ./macosSystem.nix;
+  nixosSystem = import ./nixosSystem.nix;
 
   # どこで呼んでもlibx/default.nixからのパスにできるので../つければRootから呼ぶようにできる
   relativeToRoot = lib.path.append ../.;

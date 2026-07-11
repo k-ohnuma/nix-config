@@ -21,6 +21,7 @@ let
   allSystemNames = builtins.attrNames allSystems;
   forAllSystems = func: lib.genAttrs allSystemNames func;
   darwinSystemValues = builtins.attrValues darwinSystems;
+  linuxSystemValues = builtins.attrValues linuxSystems;
   allSystemValues = builtins.attrValues allSystems;
 in
 {
@@ -28,8 +29,8 @@ in
     map (it: it.darwinConfigurations or { }) darwinSystemValues
   );
 
-  homeConfigurations = lib.attrsets.mergeAttrsList (
-    map (it: it.homeConfigurations or { }) allSystemValues
+  nixosConfigurations = lib.attrsets.mergeAttrsList (
+    map (it: it.nixosConfigurations or { }) linuxSystemValues
   );
 
   evalTests = lib.lists.all (it: it.evalTests == { }) allSystemValues;

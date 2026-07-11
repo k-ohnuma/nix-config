@@ -7,11 +7,14 @@
   ...
 }@args:
 let
-  hostName = "wsl";
+  hostName = "user";
   userName = "user";
   nixConfigRelativePath = "nix/nix-config";
 
   modules = {
+    nixos-modules = map libx.relativeToRoot [
+      "modules/nixos"
+    ];
     home-modules = map libx.relativeToRoot [
       "home/hosts/wsl/${userName}.nix"
     ];
@@ -34,5 +37,5 @@ let
     };
 in
 {
-  homeConfigurations.${userName} = libx.homeManagerSystem systemArgs;
+  nixosConfigurations.${hostName} = libx.nixosSystem systemArgs;
 }
