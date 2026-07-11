@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = require("common")
 
-local distro = "Ubuntu-26.04"
+local distro = "NixOS"
 
 config.default_domain = "WSL:" .. distro
 
