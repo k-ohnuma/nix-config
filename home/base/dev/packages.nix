@@ -21,6 +21,7 @@ in
     git-remote-codecommit
     bat
     curl
+    dnsutils
     eza
     fd
     fzf
