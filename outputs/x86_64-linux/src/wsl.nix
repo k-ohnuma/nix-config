@@ -7,7 +7,7 @@
   ...
 }@args:
 let
-  hostName = "user";
+  hostName = "wsl";
   userName = "user";
   nixConfigRelativePath = "nix/nix-config";
 

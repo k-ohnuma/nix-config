@@ -2,7 +2,7 @@ set shell := ["bash", "-euo", "pipefail", "-c"]
 
 repo := justfile_directory()
 default_host := "user"
-default_nixos_host := "user"
+default_nixos_host := "wsl"
 nix_bin := `command -v nix`
 
 [private]
