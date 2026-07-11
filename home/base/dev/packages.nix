@@ -1,4 +1,15 @@
-{ pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  system,
+  ...
+}:
+let
+  treeSitterPkgs = import inputs.nixpkgs-tree-sitter {
+    inherit system;
+    config.allowUnfree = true;
+  };
+in
 {
   home.packages = with pkgs; [
     # Nix editing and formatting.
@@ -10,6 +21,7 @@
     git-remote-codecommit
     bat
     curl
+    dnsutils
     eza
     fd
     fzf
@@ -34,7 +46,7 @@
     python3
     nodejs_26
     deno
-    tree-sitter
+    treeSitterPkgs.tree-sitter
 
     # GNU userland replacements and extended shell tools.
     coreutils
@@ -57,7 +69,6 @@
     # Document and image processing utilities.
     ghostscript
     imagemagick
-    pngpaste
     tectonic
   ];
 }

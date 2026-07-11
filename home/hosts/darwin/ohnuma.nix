@@ -5,7 +5,7 @@
   ...
 }:
 {
-  imports = [ ../../darwin ];
+  imports = [ ../../platforms/darwin ];
   programs.git = {
     signing.key = "${config.home.homeDirectory}/.ssh/id_ed25519_signers.pub";
     includes = [

@@ -26,8 +26,6 @@
       quick-terminal-animation-duration = 0.3;
 
       keybind = [
-        "cmd+u=next_tab"
-        "cmd+y=previous_tab"
         "ctrl+b>-=new_split:down"
         "ctrl+b>alt+\\=new_split:right"
         "alt+l=goto_split:right"
