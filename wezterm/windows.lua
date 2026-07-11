@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = require("common")
 
-local distro = "ubuntu26"
+local distro = "Ubuntu-26.04"
 
 config.default_domain = "WSL:" .. distro
 
@@ -9,7 +9,7 @@ local function key(key, mods, action)
   table.insert(config.keys, { key = key, mods = mods, action = action })
 end
 
-key("u", "SUPER", wezterm.action.ActivateTabRelative(1))
+key("u", "SUPER|ALT", wezterm.action.ActivateTabRelative(1))
 key("y", "SUPER", wezterm.action.ActivateTabRelative(-1))
 key("+", "SUPER|SHIFT", wezterm.action.IncreaseFontSize)
 key("w", "SUPER", wezterm.action.CloseCurrentPane({ confirm = false }))
