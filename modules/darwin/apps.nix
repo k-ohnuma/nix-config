@@ -45,6 +45,8 @@
       "docker-desktop"
       "httpie-desktop"
       "zap"
+      "chatgpt"
+      "brave-browser"
     ];
   };
 }
