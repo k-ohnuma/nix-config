@@ -47,6 +47,7 @@ in
     nodejs_26
     deno
     treeSitterPkgs.tree-sitter
+    ngrok
 
     # GNU userland replacements and extended shell tools.
     coreutils
