@@ -2,7 +2,7 @@
   "_HLDecomposition": {
     "prefix": "_hlDecomposition",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub struct HLDecomposition {",
       "    n: usize,",
       "    root: usize,",
@@ -236,14 +236,14 @@
   "_alpha": {
     "prefix": "_alpha",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "let alpha = ('a'..='z').collect_vec();"
     ]
   },
   "_angle_sort": {
     "prefix": "_angle_sort_henkaku",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub mod angle_sort {",
       "    use std::cmp::Ordering;",
       "",
@@ -342,7 +342,7 @@
   "_ceil": {
     "prefix": "_ceil",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "let ceil = |a: usize, b: usize| {",
       "    (a + b - 1) / b",
       "};"
@@ -352,7 +352,7 @@
   "_ch": {
     "prefix": "_ch",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use easy_ext::ext;",
       "",
       "#[ext(Ch)]",
@@ -381,7 +381,7 @@
   "_chmax": {
     "prefix": "_chmax",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "macro_rules! chmax {",
       "    (\\$val: expr, \\$new: expr) => {",
       "        if \\$val < \\$new {",
@@ -398,7 +398,7 @@
   "_chmin": {
     "prefix": "_chmin",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "macro_rules! chmin {",
       "    (\\$val: expr, \\$new: expr) => {",
       "        if \\$val > \\$new {",
@@ -415,7 +415,7 @@
   "_coordinate_compression": {
     "prefix": "_coordinate_compression",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use coordinate_compression::*;",
       "pub mod coordinate_compression {",
       "    use std::{",
@@ -524,7 +524,7 @@
   "_cycle": {
     "prefix": "_cycle",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn dfs(now: usize, pre: &mut Vec<Option<usize>>, g: &Vec<Vec<usize>>, ans: &mut Vec<usize>, p: usize) -> (usize, usize) {",
       "    for &v2 in g[now].iter() {",
       "        if v2 == p {",
@@ -553,7 +553,7 @@
   "_cycle2": {
     "prefix": "_cycle2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use graph::Graph;",
       "pub mod graph {",
       "    pub struct Graph {",
@@ -697,7 +697,7 @@
   "_degg": {
     "prefix": "_degg",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "#[macro_export]",
       "macro_rules! degg {(\\$(\\$val:expr),+ \\$(,)?) => {println!(\"[{}:{}] {}\",file!(),line!(),{let mut parts = Vec::new();\\$(parts.push(format!(\"{} = {:?}\", stringify!(\\$val), &\\$val));)+parts.join(\", \")})}}"
     ]
@@ -705,7 +705,7 @@
   "_didj": {
     "prefix": "_didj",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "let didj = vec![(1, 0), (-1, 0), (0, 1), (0, -1)];"
     ],
     "description": "4 directions didj"
@@ -713,7 +713,7 @@
   "_didj8": {
     "prefix": "_didj8",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "let didj = vec![(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)];"
     ],
     "description": "8 directions didj"
@@ -721,7 +721,7 @@
   "_double_ended_priority_queue": {
     "prefix": "_double_ended_priority_queue",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub mod double_ended_priority_queue {",
       "    use std::collections::BTreeMap;",
       "    // trait教会を考えるのがだるすぎる",
@@ -790,7 +790,7 @@
   "_dsu_with_merge": {
     "prefix": "_dsu_with_merge",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use dsu_with_merge::{DsuWithMerge, Merge};",
       "pub mod dsu_with_merge {",
       "    use ac_library::Dsu;",
@@ -890,7 +890,7 @@
   "_edit_distance": {
     "prefix": "_edit_distance",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub mod edit_distance {",
       "    /// Complexity:",
       "    /// - edit_distance: O(nm) time, O(m) memory",
@@ -1045,7 +1045,7 @@
   "_erathos_segmented": {
     "prefix": "_erathos_segmented",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "// 10^14くらいまでの素数に関して[l, r]の範囲で列挙する",
       "// 区間篩",
       "pub use segmented_sieve::*;",
@@ -1206,7 +1206,7 @@
   "_euler_tour": {
     "prefix": "_euler_tour",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "struct EulerTour {",
       "    to: Vec<Vec<usize>>,",
       "    parent: Vec<usize>,",
@@ -1247,7 +1247,7 @@
   "_extgcd": {
     "prefix": "_extgcd",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn extgcd(a: isize, b: isize, i: &mut isize, j: &mut isize) -> isize {",
       "    if b == 0 {",
       "        *i = 1;",
@@ -1265,7 +1265,7 @@
   "_extgcd2": {
     "prefix": "_extgcd2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use num_traits::{PrimInt, Signed};",
       "",
       "// returns (g, x, y): a*x + b*y = g, g >= 0",
@@ -1288,7 +1288,7 @@
   "_fenwick_tree": {
     "prefix": "_fenwick_tree",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use fenwick_tree::*;",
       "mod fenwick_tree {",
       "    use std::ops::{Bound, RangeBounds};",
@@ -1416,7 +1416,7 @@
   "_floor_nk_sum": {
     "prefix": "_floor_nk_sum",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use floor_nk::*;",
       "pub mod floor_nk {",
       "    use ac_library::{modint::ModIntBase, ModInt998244353};",
@@ -1445,7 +1445,7 @@
   "_frac": {
     "prefix": "_frac",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "#[derive(Debug, Clone, Copy, Hash, Eq)]",
       "pub struct Frac(i128, i128);",
       "",
@@ -1614,7 +1614,7 @@
   "_frac2": {
     "prefix": "_frac2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use frac::Frac;",
       "pub mod frac {",
       "    use std::{",
@@ -2025,7 +2025,7 @@
   "_hash_value_program": {
     "prefix": "_hash_value_program",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "const MOD:isize = 214783647;",
       "fn hash_value(l:usize, r:usize, h:&Vec<isize>, p:&Vec<isize>) -> Option<isize> {",
       "    if r + 1 < l {",
@@ -2071,7 +2071,7 @@
   "_henkaku_sort": {
     "prefix": "_henkaku_sort",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use argcmp::*;",
       "pub mod argcmp {",
       "    use std::cmp::Ordering;",
@@ -2127,7 +2127,7 @@
   "_henkaku_sort2": {
     "prefix": "_henkaku_sort2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use ordered_float::OrderedFloat;",
       "#[derive(Debug, Clone, Copy)]",
       "pub struct Point {",
@@ -2179,7 +2179,7 @@
   "_hutarigumi_dfs": {
     "prefix": "_hutarigumi_dfs",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn hutarigumi_dfs(set: &mut HashSet<usize>, ans: &mut Vec<Vec<(usize, usize)>>, now: &mut Vec<(usize, usize)>) {",
       "    let set_c = set.clone().into_iter().collect_vec();",
       "    let first = set_c[0];",
@@ -2206,7 +2206,7 @@
   "_interval_set": {
     "prefix": "_interval_set",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use interval_set::*;",
       "pub mod interval_set {",
       "    use std::{",
@@ -2544,7 +2544,7 @@
   "_is_chokusen": {
     "prefix": "_is_chokusen",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn is_chokusen<T: Clone + Copy + num_integer::Integer>(a: (T, T), b: (T, T), c: (T, T)) -> bool {",
       "    let mut v = vec![a, b, c];",
       "    v.sort_by_key(|&e| e.0);",
@@ -2590,7 +2590,7 @@
   "_is_prime_miller": {
     "prefix": "_is_prime_miller",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn is_prime_miller(n: u64) -> bool {",
       "    if n <= 1 {",
       "        return false;",
@@ -2641,7 +2641,7 @@
   "_isize_ceil": {
     "prefix": "_isize_ceil",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn isize_ceil(a: isize, b: isize) -> isize {",
       "    if (a + b - 1 < 0) && (a + b - 1) % b != 0 {",
       "        return (a + b - 1)/ b - 1;",
@@ -2654,7 +2654,7 @@
   "_isize_floor_div": {
     "prefix": "_isize_floor_div",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn isize_floor_div(x: isize, m: isize) -> isize {",
       "    let r = (x % m + m) % m;",
       "    (x - r) / m",
@@ -2665,7 +2665,7 @@
   "_itertools": {
     "prefix": "_itertools",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub trait CollectVec: Iterator + Sized {",
       "    fn collect_vec(self) -> Vec<Self::Item>;",
       "}",
@@ -2692,7 +2692,7 @@
   "_kousa": {
     "prefix": "_kousa",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "type P = (usize, usize);",
       "",
       "fn sign(v: isize) -> i32 {",
@@ -2736,7 +2736,7 @@
   "_manhattan": {
     "prefix": "_manhattan",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn replace_manhattan_coord(xy: (isize, isize)) -> (isize, isize) {",
       "    let (x, y) = xy;",
       "    (x - y, x + y)",
@@ -2748,7 +2748,7 @@
   "_mat_pow": {
     "prefix": "_mat_pow",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "type Mat = Vec<Vec<ModInt1000000007>>;",
       "",
       "fn mul(a: &Mat, b: &Mat) -> Mat {",
@@ -2786,7 +2786,7 @@
   "_matrix_kake": {
     "prefix": "_matrix_kake",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn multiply_matrices<T: std::ops::Mul<Output = T> + std::iter::Sum + Copy + Default>(a: &Vec<Vec<T>>, b: &Vec<Vec<T>>) -> Option<Vec<Vec<T>>> {",
       "    if a[0].len() != b.len() {",
       "        return None;",
@@ -2810,7 +2810,7 @@
   "_matrix_pow": {
     "prefix": "_matrix_pow",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use mat_pow::*;",
       "pub mod mat_pow {",
       "    /// 2x2 Matrix exponentiation library for affine / linear recurrences.",
@@ -2912,7 +2912,7 @@
   "_matrix_pow2": {
     "prefix": "_matrix_pow2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use mat_pow2::*;",
       "pub mod mat_pow2 {",
       "    /// nxm Matrix exponentiation library for affine / linear recurrences.",
@@ -3084,7 +3084,7 @@
   "_mod_nck_9982": {
     "prefix": "_nck_mod",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "type Mint = ModInt1000000007;",
       "pub struct Comb {",
       "    pub fact: Vec<Mint>,",
@@ -3121,7 +3121,7 @@
   "_modpow": {
     "prefix": "_modpow",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn mod_pow(mut x: usize, mut n: usize, m: usize) -> usize {",
       "    x %= m;",
       "    let mut ans = 1;",
@@ -3140,7 +3140,7 @@
   "_mos": {
     "prefix": "_mos",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use mos::*;",
       "pub mod mos {",
       "    #[derive(Clone, Copy, Debug)]",
@@ -3235,7 +3235,7 @@
   "_nc2": {
     "prefix": "_nc2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "let nc2 = |n: usize| {",
       "    if n <= 1 {",
       "        return 0;",
@@ -3248,7 +3248,7 @@
   "_nc3": {
     "prefix": "_nc3",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "let nc3 = |n: usize| {",
       "    if n <= 2 {",
       "        return 0;",
@@ -3261,7 +3261,7 @@
   "_nck": {
     "prefix": "_nck",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn nck(n: u128, k: u128) -> u128 {",
       "    if k > n {",
       "        return 0;",
@@ -3282,7 +3282,7 @@
   "_nck_2": {
     "prefix": "_nck_2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub mod comb {",
       "    use ac_library::modint::ModIntBase;",
       "",
@@ -3318,7 +3318,7 @@
   "_ordered_set": {
     "prefix": "_ordered_set",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use ordered_set::OrderedSet;",
       "pub mod ordered_set {",
       "    use num_traits::Bounded;",
@@ -3555,7 +3555,7 @@
   "_potentialunionfind": {
     "prefix": "_potential_union_find",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub struct PotentialUnionFind {",
       "    rank: Vec<usize>,",
       "    parent: Vec<usize>,",
@@ -3633,7 +3633,7 @@
   "_prefix_sum_1d": {
     "prefix": "_prefix_sum_1d",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use prefix_sum_1d::*;",
       "pub mod prefix_sum_1d {",
       "    use std::ops::{Add, Bound, Range, RangeBounds, Sub};",
@@ -3817,7 +3817,7 @@
   "_prefix_sum_3d": {
     "prefix": "_prefix_sum_3d",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use num_traits::Zero;",
       "use std::{",
       "    ops::{Add, AddAssign, Bound, Range, RangeBounds, Sub, SubAssign},",
@@ -4036,7 +4036,7 @@
   "_product_repeat": {
     "prefix": "_product_repeat",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use product_repeat::ProductRepeat;",
       "pub mod product_repeat {",
       "    use itertools::{Itertools, MultiProduct};",
@@ -4060,7 +4060,7 @@
   "_quickfind": {
     "prefix": "_quickfind",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub struct QuickFind {",
       "    leader: Vec<usize>,",
       "    members: Vec<Vec<usize>>,",
@@ -4106,7 +4106,7 @@
   "_random_test": {
     "prefix": "_random_test",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use random_test::*;",
       "pub mod random_test {",
       "    use rand::prelude::*;",
@@ -4222,7 +4222,7 @@
   "_rerooting": {
     "prefix": "_rerooting",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn rerooting<",
       "    T: Clone,",
       "    E: IntoIterator<Item = (usize, usize)>,",
@@ -4348,7 +4348,7 @@
   "_rerooting2": {
     "prefix": "_rerooting2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use crate::rerooting::Rerooting;",
       "pub mod rerooting {",
       "    use std::collections::VecDeque;",
@@ -4571,7 +4571,7 @@
   "_rotate_90_degrees": {
     "prefix": "_rotate_90_degrees",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn rotate_90_degrees<T: Clone>(matrix: Vec<Vec<T>>) -> Vec<Vec<T>> {",
       "    let rows = matrix.len();",
       "    let cols = matrix[0].len();",
@@ -4591,7 +4591,7 @@
   "_round": {
     "prefix": "_round",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn round(x: usize, i: u32) -> usize {",
       "    let ip = 10usize.pow(i + 1);",
       "    let ii = 10usize.pow(i);",
@@ -4603,7 +4603,7 @@
   "_scanner": {
     "prefix": "_scanner",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use std::{io::{stdin, Read}, str::FromStr};",
       "",
       "pub struct Scanner<I: Iterator<Item = char>> {",
@@ -4693,7 +4693,7 @@
   "_seg_string": {
     "prefix": "_seg_string",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use ac_library::segtree::{Monoid, Segtree};",
       "use std::sync::OnceLock;",
       "",
@@ -4818,7 +4818,7 @@
   "_shakutori_template": {
     "prefix": "_shakutori_template",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "// let mut right: usize = 0;",
       "// for left in 0..n {",
       "//     // 右端を可能な限り伸ばす",
@@ -4845,7 +4845,7 @@
   "_sishagonyu": {
     "prefix": "_sishagonyu",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn round_half_up(value: f64, digits: i32) -> f64 {",
       "    let factor = 10f64.powi(digits);",
       "    let abs = value.abs() * factor;",
@@ -4858,7 +4858,7 @@
   "_soinsu_factorization": {
     "prefix": "_soinsu_factorization",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn factorization(mut x: i64) -> Vec<(i64, i64)> {",
       "    let mut resu = Vec::new();",
       "    for i in 2.. {",
@@ -4886,7 +4886,7 @@
   "_sqrt": {
     "prefix": "_sqrt",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use num_traits::int::PrimInt;",
       "pub fn isqrt<T: PrimInt>(v: T) -> T {",
       "    assert!(v >= T::zero());",
@@ -4918,7 +4918,7 @@
   "_sqrt_nibutan": {
     "prefix": "_sqrt_nibutan",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn sqrt_i128(v: i128) -> i128 {",
       "    let mut ok = 0;",
       "    let mut ng = v;",
@@ -4938,7 +4938,7 @@
   "_stringhash": {
     "prefix": "_stringhash",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "struct StringHash {",
       "    modulo: u128,",
       "    len: usize,",
@@ -5004,7 +5004,7 @@
   "_stringhash2": {
     "prefix": "_stringhash2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use string_hash::*;",
       "pub mod string_hash {",
       "    use std::ops::{Bound, RangeBounds};",
@@ -5145,7 +5145,7 @@
   "_superslice": {
     "prefix": "_superslice",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub mod superslice {",
       "    use core::cmp::Ordering::{self, Greater, Less};",
       "    pub trait Ext {",
@@ -5452,7 +5452,7 @@
   "_transpose": {
     "prefix": "_transpose",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn transpose<T: Clone + Copy + Default>(matrix: Vec<Vec<T>>) -> Vec<Vec<T>> {",
       "    if matrix.is_empty() {",
       "        return Vec::new();",
@@ -5477,7 +5477,7 @@
   "_trie": {
     "prefix": "_trie",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "#[derive(Debug)]",
       "pub struct Node {",
       "    count: usize,",
@@ -5590,7 +5590,7 @@
   "_trie2": {
     "prefix": "_trie2",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use trie::*;",
       "pub mod trie {",
       "    #[derive(Debug, Clone)]",
@@ -5733,7 +5733,7 @@
   "_undo_unionfind": {
     "prefix": "_undo_unionfind",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "#[derive(Clone, Debug)]",
       "pub struct RollbackUnionFind {",
       "    data: Vec<isize>,",
@@ -5818,7 +5818,7 @@
   "_wakugai_hw": {
     "prefix": "_wakugai_hw",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "let ni = i as isize + di;",
       "let nj = j as isize + dj;",
       "if ni < 0 || ni >= h as isize || nj < 0 || nj >= w as isize {",
@@ -5832,7 +5832,7 @@
   "_yakusuu": {
     "prefix": "_yakusuu",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "fn yakusuu(n: usize) -> HashSet<usize> {",
       "    let mut ret = HashSet::new();",
       "    let mut now = 1usize;",
@@ -5854,7 +5854,7 @@
   "_zaatsu": {
     "prefix": "_zaatsu",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use coordinate_compression::*;",
       "pub mod coordinate_compression {",
       "    use std::{collections::HashMap, hash::Hash};",
@@ -5895,7 +5895,7 @@
   "_zobrist_hash": {
     "prefix": "_zobrist_hash",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "pub use zobrist_hash::*;",
       "pub mod zobrist_hash {",
       "    use rand::Rng;",
@@ -5951,7 +5951,7 @@
   "eratosthenes_struct": {
     "prefix": "_eratosthenes",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "use erathosthenes::*;",
       "pub mod erathosthenes {",
       "    use ac_library::modint::ModIntBase;",
@@ -6240,7 +6240,7 @@
   "init": {
     "prefix": "_init",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "#[rustfmt::skip]",
       "pub mod lib {pub use ac_library::*;pub use itertools::{join, Combinations, Itertools, MultiProduct, Permutations};pub use proconio::{input,marker::{Chars, Usize1}};pub use std::{cmp::*, collections::*, mem::swap};pub use regex::Regex;pub use superslice::Ext;pub use num_traits::{One, ToPrimitive, FromPrimitive, PrimInt};#[macro_export]macro_rules! degg {(\\$(\\$val:expr),+ \\$(,)?) => {println!(\"[{}:{}] {}\",file!(),line!(),{let mut parts = Vec::new();\\$(parts.push(format!(\"{} = {:?}\", stringify!(\\$val), &\\$val));)+parts.join(\", \")})}}}",
       "",
@@ -6256,7 +6256,7 @@
   "zero_format": {
     "prefix": "_zero_format",
     "body": [
-      "// https://github.com/k-ohnuma/nix-config/blob/main/vsnip/rust.json",
+      "// https://github.com/k-ohnuma/nix-config/blob/2efb82ae485ec70164f68797f9ca024ddce5d091/vsnip/rust.json",
       "#[ext(StUtil)]",
       "impl <T> T",
       "where ",
