@@ -8,7 +8,7 @@
       autoUpdate = true;
       upgrade = true;
       # nixで管理してないパッケージをuninstall
-      cleanup = "uninstall";
+      cleanup = "none";
       extraFlags = [ "--force-cleanup" ];
     };
 
