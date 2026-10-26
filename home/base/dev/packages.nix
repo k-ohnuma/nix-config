@@ -5,6 +5,9 @@
   ...
 }:
 let
+  codecommitPkgs = import inputs.nixpkgs-codecommit {
+    inherit system;
+  };
   treeSitterPkgs = import inputs.nixpkgs-tree-sitter {
     inherit system;
     config.allowUnfree = true;
@@ -18,7 +21,7 @@ in
 
     # Core CLI utilities used across repos.
     awscli2
-    git-remote-codecommit
+    codecommitPkgs.git-remote-codecommit
     bat
     curl
     dnsutils

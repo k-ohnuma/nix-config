@@ -9,6 +9,8 @@
     nixpkgs-tree-sitter.url = "github:nixos/nixpkgs/4c1018dae018162ec878d42fec712642d214fdfa";
     # nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-25.11-darwin";
     nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    # Temporary pin: newer awscli v1 dependencies fail runtime dependency checks.
+    nixpkgs-codecommit.url = "github:nixos/nixpkgs/8c3cede7ddc26bd659d2d383b5610efbd2c7a16e";
     nix-darwin = {
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
