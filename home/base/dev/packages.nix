@@ -51,6 +51,7 @@ in
     deno
     treeSitterPkgs.tree-sitter
     ngrok
+    ffmpeg
 
     # GNU userland replacements and extended shell tools.
     coreutils
