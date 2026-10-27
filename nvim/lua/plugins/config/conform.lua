@@ -5,7 +5,7 @@ require("conform").setup({
     typescript = { "biome" },
     javascriptreact = { "biome" },
     typescriptreact = { "biome" },
-    json = { "biome" },
+    json = { "prettier" },
     yaml = { "yamlfmt" },
     markdown = { "prettier" },
     toml = { "taplo" },
