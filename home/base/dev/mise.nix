@@ -17,6 +17,7 @@
         # vsnip
         "cargo:vsnip-cli" = "latest";
         "npm:@openai/codex" = "latest";
+        "claude" = "latest";
       };
     };
   };
