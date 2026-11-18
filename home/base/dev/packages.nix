@@ -52,6 +52,7 @@ in
     treeSitterPkgs.tree-sitter
     ngrok
     ffmpeg
+    herdr
 
     # GNU userland replacements and extended shell tools.
     coreutils
