@@ -1,0 +1,15 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+b"
+workspace_picker = "prefix+b"
+split_vertical = 'prefix+\'
+split_horizontal = "prefix+minus"
+close_pane = "prefix+d"
+focus_pane_left = "alt+h"
+focus_pane_down = "alt+j"
+focus_pane_up = "alt+k"
+focus_pane_right = "alt+l"
+
+[ui.sound]
+enabled = false

@@ -28,10 +28,10 @@
       keybind = [
         "ctrl+n>-=new_split:down"
         "ctrl+n>alt+\\=new_split:right"
-        "alt+l=goto_split:right"
-        "alt+k=goto_split:up"
-        "alt+j=goto_split:down"
-        "alt+h=goto_split:left"
+        "ctrl+n>l=goto_split:right"
+        "ctrl+n>k=goto_split:up"
+        "ctrl+n>j=goto_split:down"
+        "ctrl+n>h=goto_split:left"
         "global:ctrl+shift+tab=toggle_quick_terminal"
       ];
     };
