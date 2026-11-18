@@ -1,7 +1,9 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "rust_analyzer", "ts_ls" },
-  automatic_enable = true,
+  ensure_installed = { "rust_analyzer", "tsc" },
+  automatic_enable = {
+    exclude = { "ts_ls" },
+  },
 })
 
 local home = vim.env.HOME or "~"
@@ -107,11 +109,19 @@ vim.lsp.config("rust_analyzer", {
   end,
 })
 
-vim.lsp.config("ts_ls", {
-  filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
-  settings = {
-    diagnostics = { ignoredCodes = { 6133 } },
-    completions = { completeFunctionCalls = true },
+vim.lsp.config("tsc", {
+  cmd = { "tsc", "--lsp", "--stdio" },
+  filetypes = {
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact",
+  },
+  root_markers = {
+    "tsconfig.json",
+    "jsconfig.json",
+    "package.json",
+    ".git",
   },
   on_init = function(client)
     client.server_capabilities.documentFormattingProvider = false
@@ -119,6 +129,7 @@ vim.lsp.config("ts_ls", {
   end,
 })
 
+vim.lsp.enable("tsc")
 vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
