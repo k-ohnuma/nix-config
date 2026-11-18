@@ -20,7 +20,7 @@
       shell-integration-features = "no-cursor";
 
       window-show-tab-bar = "never";
-      background-opacity = 0.9;
+      background-opacity = 1.0;
       quick-terminal-position = "center";
       quick-terminal-screen = "main";
       quick-terminal-animation-duration = 0.3;
