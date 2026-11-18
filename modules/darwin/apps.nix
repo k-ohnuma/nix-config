@@ -47,6 +47,8 @@
       "zap"
       "chatgpt"
       "brave-browser"
+
+      "obsidian"
     ];
   };
 }
