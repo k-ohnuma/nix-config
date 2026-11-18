@@ -121,6 +121,10 @@
       };
 
       CustomUserPreferences = {
+        "com.apple.assistant.support" = {
+          # Siri を無効化
+          "Assistant Enabled" = false;
+        };
         "com.apple.AppleMultitouchTrackpad" = {
           # スクロールにトラックパッドを使用
           TrackpadScroll = 1;
