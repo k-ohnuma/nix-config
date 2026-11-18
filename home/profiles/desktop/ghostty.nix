@@ -26,8 +26,8 @@
       quick-terminal-animation-duration = 0.3;
 
       keybind = [
-        "ctrl+b>-=new_split:down"
-        "ctrl+b>alt+\\=new_split:right"
+        "ctrl+n>-=new_split:down"
+        "ctrl+n>alt+\\=new_split:right"
         "alt+l=goto_split:right"
         "alt+k=goto_split:up"
         "alt+j=goto_split:down"
