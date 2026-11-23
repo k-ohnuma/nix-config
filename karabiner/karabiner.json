@@ -9,24 +9,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["com.openai.chat"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "return_or_enter",
-                  "modifiers": {
-                    "mandatory": ["control"],
-                    "optional": ["any"]
-                  }
-                },
-                "to": [{ "key_code": "return_or_enter" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["com.openai.chat"],
+                    "bundle_identifiers": ["^com\\.openai\\.(codex|chat)$"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -43,7 +26,24 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["com.openai.chat"],
+                    "bundle_identifiers": ["^com\\.openai\\.(codex|chat)$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [{ "key_code": "return_or_enter" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com\\.openai\\.(codex|chat)$"],
                     "type": "frontmost_application_if"
                   }
                 ],
