@@ -26,12 +26,12 @@
       quick-terminal-animation-duration = 0.3;
 
       keybind = [
-        "ctrl+n>-=new_split:down"
-        "ctrl+n>alt+\\=new_split:right"
-        "ctrl+n>l=goto_split:right"
-        "ctrl+n>k=goto_split:up"
-        "ctrl+n>j=goto_split:down"
-        "ctrl+n>h=goto_split:left"
+        "ctrl+m>-=new_split:down"
+        "ctrl+m>alt+\\=new_split:right"
+        "ctrl+m>l=goto_split:right"
+        "ctrl+m>k=goto_split:up"
+        "ctrl+m>j=goto_split:down"
+        "ctrl+m>h=goto_split:left"
         "global:ctrl+shift+tab=toggle_quick_terminal"
       ];
     };
